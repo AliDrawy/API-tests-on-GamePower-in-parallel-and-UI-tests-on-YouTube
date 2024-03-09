@@ -1,0 +1,26 @@
+{
+  "url": "https://www.gamerpower.com/api/giveaways",
+  "platform": [
+    "pc",
+    "steam",
+    "epic-games-store",
+    "ps4",
+    "ps5",
+    "xbox-one",
+    "xbox-series-xs",
+    "switch",
+    "android",
+    "ios",
+    "xbox-360"
+  ],
+  "type": [
+    "game",
+    "loot",
+    "beta"
+  ],
+  "value": [
+    "date",
+    "value",
+    "popularity"
+  ]
+}
