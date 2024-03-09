@@ -1,1 +1,1 @@
-# API-tests-on-GamePower-in-parallel-and-UI-tests-on-YouTube
+# API-tests-on-GamerPower-in-parallel-and-UI-tests-on-YouTube
