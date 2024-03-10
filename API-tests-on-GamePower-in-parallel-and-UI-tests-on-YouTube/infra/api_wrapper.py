@@ -21,3 +21,8 @@ class GamerPowerAPI:
         with open(filename, 'r') as file:
             config = json.load(file)
             return config
+
+
+
+
+#
