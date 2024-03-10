@@ -3,6 +3,7 @@ from infra.api_wrapper import GamerPowerAPI  # Importing the GamerPowerAPI class
 import random
 from datetime import datetime
 
+
 class GamerPower(GamerPowerAPI):  # Defining a class named GamerPower that inherits from GamerPowerAPI
 
     def __init__(self):  # Constructor method to initialize class attributes
@@ -12,25 +13,6 @@ class GamerPower(GamerPowerAPI):  # Defining a class named GamerPower that inher
         self.type = GamerPowerAPI().read_config_data("config.json")['type']
         self.value = GamerPowerAPI().read_config_data("config.json")['value']
 
-    # Method to get all giveaways
-    def get_all_giveaways(self):
-        return requests.get(self.url)
-
-    # Method to get giveaways by platform
-    def get_giveaways_by_platform(self, platform):
-        return requests.get(f'{self.url}?platform={platform}').json()
-
-    # Method to get giveaways sorted by popularity
-    def get_giveaways_sorted_by_popularity(self):
-        return requests.get(f'{self.url}?sort-by=popularity').json()
-
-    # Method to get giveaways by platform, type, and sorted by date
-    def get_giveaways_by_platform_type_and_sorted_by_date(self, platform, giveaway_type):
-        self.response = requests.get(f'{self.url}?platform={platform}&type={giveaway_type}&sort-by=date').json()
-        if 'status' in self.response:
-            return 0
-        else:
-            return self.response
 
     # Method to concatenate a list of items into a string
     def return_str_for_group(self, group_list):
@@ -39,13 +21,6 @@ class GamerPower(GamerPowerAPI):  # Defining a class named GamerPower that inher
             group += group_list[item] + '.'
         return group[:-1]
 
-    # Method to get giveaways grouped by platform and type
-    def get_giveaways_group_by_platform_and_type(self, platforms, types):
-        self.response = requests.get(f'{self.url[:-9]}filter?platform={platforms}&type={types}').json()
-        if 'status' in self.response:
-            return 0
-        else:
-            return self.response
 
     # Method to check if a platform or giveaway type is present in the data
     def check_platforms_group(self, data, group_list, group_type):
