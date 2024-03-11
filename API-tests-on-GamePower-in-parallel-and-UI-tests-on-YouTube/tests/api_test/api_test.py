@@ -1,5 +1,5 @@
 import unittest
-from logic.api_logic import GamerPower
+from logic.api_logic.api_logic import GamerPower
 
 
 class TestGamePower(unittest.TestCase):
@@ -8,6 +8,7 @@ class TestGamePower(unittest.TestCase):
         self.game_power = GamerPower()
         self.response = None
         self.data = None
+        self.counter = 10
 
     # Test case to validate getting all giveaways
     def test_get_All_giveaways(self):
@@ -41,10 +42,11 @@ class TestGamePower(unittest.TestCase):
         platform = self.game_power.choose_random_value(self.game_power.platform)
         giveaway_type = self.game_power.choose_random_value(self.game_power.type)
         self.data = self.game_power.get_giveaways_by_platform_type_and_sorted_by_date(platform, giveaway_type)
-        while self.data == 0:
+        while self.data == 0 and self.counter != 0:
             platform = self.game_power.choose_random_value(self.game_power.platform)
             giveaway_type = self.game_power.choose_random_value(self.game_power.type)
             self.data = self.game_power.get_giveaways_by_platform_type_and_sorted_by_date(platform, giveaway_type)
+            self.counter -= 1
         self.response = self.game_power.check_type_of_giveaways(giveaway_type, self.data)
         self.assertTrue(self.response)
         self.response = self.game_power.check_platforms_type(self.data, platform)

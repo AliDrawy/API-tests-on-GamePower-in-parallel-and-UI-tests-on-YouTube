@@ -1,6 +1,6 @@
 import unittest
-from infra.browser_wrapper import WebNavigator
-from logic.youtube_home_page import YouTubeHomePage
+from infra.ui_infra.browser_wrapper import WebNavigator
+from logic.ui_logic.youtube_home_page import YouTubeHomePage
 
 
 class HomePage(unittest.TestCase):

@@ -1,7 +1,5 @@
-import requests
-from infra.api_wrapper import GamerPowerAPI  # Importing the GamerPowerAPI class from the infra module
+from infra.api_infra.api_wrapper import GamerPowerAPI  # Importing the GamerPowerAPI class from the infra module
 import random
-from datetime import datetime
 
 
 class GamerPower(GamerPowerAPI):  # Defining a class named GamerPower that inherits from GamerPowerAPI
