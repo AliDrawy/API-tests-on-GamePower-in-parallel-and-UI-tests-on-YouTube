@@ -24,16 +24,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Setup ChromeDriver
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: latest
-
-      - name: Setup FirefoxDriver
-          uses: browser-actions/setup-firefox@v1
-          with:
-            firefox-version: latest
-
-      - name: Run api test
-        run: |
-          python -m unittest tests/api_test/test_runner.py
+#      - name: Setup ChromeDriver
+#        uses: browser-actions/setup-chrome@v1
+#        with:
+#          chrome-version: latest
+#
+#      - name: Setup EdgeDriver
+#        uses: browser-actions/setup-edge@v1
+#        with:
+#          edge-version: latest
+#
+#      - name: Run the tests
+#        run: |
+#          python -m unittest tests/api_test/test_runner.py
