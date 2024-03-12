@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-from infra.page_base import WebPageBase
+from infra.ui_infra.page_base import WebPageBase
 from selenium.webdriver import ActionChains
 
 

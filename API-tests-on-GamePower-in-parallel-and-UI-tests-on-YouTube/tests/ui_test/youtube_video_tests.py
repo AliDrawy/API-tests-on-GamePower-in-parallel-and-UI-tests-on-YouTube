@@ -1,6 +1,6 @@
 import unittest
-from infra.browser_wrapper import WebNavigator
-from logic.youtube_video import YouTubeVideo
+from infra.ui_infra.browser_wrapper import WebNavigator
+from logic.ui_logic.youtube_video import YouTubeVideo
 
 
 class VideoTests(unittest.TestCase):
