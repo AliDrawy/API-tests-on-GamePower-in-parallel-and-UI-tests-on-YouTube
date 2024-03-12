@@ -1,4 +1,4 @@
-from infra.api_infra.api_wrapper import GamerPowerAPI  # Importing the GamerPowerAPI class from the infra module
+from API_tests_on_GamePower_and_UI_tests_on_YouTube.infra.api_infra.api_wrapper import GamerPowerAPI  # Importing the GamerPowerAPI class from the infra module
 import random
 
 

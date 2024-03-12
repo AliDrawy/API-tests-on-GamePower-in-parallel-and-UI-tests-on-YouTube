@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from infra.ui_infra.page_base import WebPageBase
+from API_tests_on_GamePower_and_UI_tests_on_YouTube.infra.ui_infra.page_base import WebPageBase
 from selenium.common.exceptions import TimeoutException
 
 

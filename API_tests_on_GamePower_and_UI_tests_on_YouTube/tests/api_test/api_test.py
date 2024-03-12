@@ -1,5 +1,5 @@
 import unittest
-from logic.api_logic.api_logic import GamerPower
+from API_tests_on_GamePower_and_UI_tests_on_YouTube.logic.api_logic.api_logic import GamerPower
 
 
 class TestGamePower(unittest.TestCase):

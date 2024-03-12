@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from youtube_video_tests import VideoTests
 from youtube_channel_tests import ChannelTests
 from youtube_home_page_tests import HomePage
-from ui_infra.browser_wrapper import WebNavigator
+from API_tests_on_GamePower_and_UI_tests_on_YouTube.ui_infra.browser_wrapper import WebNavigator
 
 test_serial_cases = [ChannelTests, VideoTests, HomePage]
 test_cases = [ChannelTests]
