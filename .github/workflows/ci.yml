@@ -28,11 +28,11 @@ jobs:
         uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: latest
-#
-#      - name: Setup EdgeDriver
-#        uses: browser-actions/setup-edge@v1
-#        with:
-#          edge-version: latest
+
+      - name: Setup FirefoxDriver
+        uses: browser-actions/setup-firefox@v1
+        with:
+          firefox-version: latest
 #
 #      - name: Run the tests
 #        run: |
