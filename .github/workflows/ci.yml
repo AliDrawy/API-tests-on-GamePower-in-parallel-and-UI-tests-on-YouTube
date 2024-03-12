@@ -33,7 +33,7 @@ jobs:
         uses: browser-actions/setup-firefox@v1
         with:
           firefox-version: latest
-#
-#      - name: Run the tests
-#        run: |
-#          python -m unittest tests/api_test/test_runner.py
+
+      - name: Run the tests
+        run: |
+          python -m unittest tests/api_test/test_runner.py
