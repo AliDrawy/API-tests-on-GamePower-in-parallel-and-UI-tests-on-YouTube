@@ -6,7 +6,7 @@ from API_tests_on_GamePower_and_UI_tests_on_YouTube.logic.ui_logic.youtube_home_
 class HomePage(unittest.TestCase):
     def setUp(self):
         self.navigator = WebNavigator()
-        self.browser_driver = self.navigator.launch_browser(self.__class__.browser)
+        self.browser_driver = self.navigator.launch_browser("chrome")
         self.wait_tool = self.navigator.fetch_wait()
         self.YouTubeHomePage = YouTubeHomePage(self.browser_driver, self.wait_tool)
 
