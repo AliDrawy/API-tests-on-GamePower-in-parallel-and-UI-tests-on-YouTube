@@ -1,23 +1,3 @@
-// pipeline {
-//     agent any
-//     stages {
-//         stage('Build') {
-//             steps {
-//                 echo 'Building..'
-//             }
-//         }
-//         stage('Test') {
-//             steps {
-//                 echo 'Testing..'
-//             }
-//         }
-//         stage('Deploy') {
-//             steps {
-//                 echo 'Deploying..'
-//             }
-//         }
-//     }
-// }
 pipeline {
     agent any
 
@@ -35,6 +15,8 @@ pipeline {
                 echo 'Testing..'
                 // Add test execution steps here
                 bat 'python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/api_test/api_test.py'
+                bat 'python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/ui_test/youtube_channel_tests.py'
+
             }
         }
         stage('Deploy') {
