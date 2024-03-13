@@ -33,6 +33,7 @@ class WebNavigator:
 
     def get_driver(self, browser):
         browser_type = browser
+        option = self.set_up_capabilities(browser_type)
         if self.parallel:
             options = self.set_up_capabilities(browser_type)
             self.web_driver = webdriver.Remote(command_executor="http://192.168.217.1:4444", options=options)
@@ -40,11 +41,11 @@ class WebNavigator:
 
         else:
             if browser.lower() == 'chrome':
-                self.web_driver = webdriver.Chrome()
+                self.web_driver = webdriver.Chrome(options=option)
             elif browser.lower() == 'firefox':
-                self.web_driver = webdriver.Firefox()
+                self.web_driver = webdriver.Firefox(options=option)
             elif browser.lower() == 'edge':
-                self.web_driver = webdriver.Edge()
+                self.web_driver = webdriver.Edge(options=option)
         self.open_website("https://www.youtube.com/")
 
         return self.web_driver
@@ -57,8 +58,10 @@ class WebNavigator:
             options = webdriver.FirefoxOptions()
         elif browser_type.lower() == 'edge':
             options = webdriver.EdgeOptions()
-
-        options.add_argument(f'--platformName=windows')
+        options.add_argument("--headless")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        # options.add_argument(f'--platformName=windows')
         return options
 
     def get_browsers(self):
