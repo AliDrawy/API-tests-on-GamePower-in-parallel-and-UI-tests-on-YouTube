@@ -34,14 +34,14 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // Add test execution steps here
-                sh 'python -m unittest tests/api_test/api_test.py'
+                bat 'python -m unittest tests/api_test/api_test.py'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying..'
-                git 'commit -am "Deploying latest changes"'
-                git 'push origin main'
+//                 git 'commit -am "Deploying latest changes"'
+//                 git 'push origin main'
 
             }
         }
