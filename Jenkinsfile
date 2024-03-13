@@ -34,7 +34,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // Add test execution steps here
-                bat 'python -m unittest tests/api_test/api_test.py'
+                bat 'python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/api_test/api_test.py'
             }
         }
         stage('Deploy') {
