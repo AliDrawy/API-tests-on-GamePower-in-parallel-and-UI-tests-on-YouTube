@@ -29,7 +29,7 @@ jobs:
 
       - name: Start Selenium Server HUB
         run: |
-                java -jar selenium-server.jar -role hub &
+               java -jar selenium-server-4.17.0.jar hub &
                 sleep 10
 
       - name: Start Selenium Server node
