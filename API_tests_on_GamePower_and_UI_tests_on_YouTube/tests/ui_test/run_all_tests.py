@@ -1,7 +1,5 @@
 import unittest
 from concurrent.futures import ThreadPoolExecutor
-from API_tests_on_GamePower_and_UI_tests_on_YouTube.tests.ui_test.youtube_video_tests import VideoTests
-from API_tests_on_GamePower_and_UI_tests_on_YouTube.tests.ui_test.youtube_channel_tests import ChannelTests
 from API_tests_on_GamePower_and_UI_tests_on_YouTube.tests.ui_test.youtube_home_page_tests import HomePage
 from API_tests_on_GamePower_and_UI_tests_on_YouTube.infra.ui_infra.browser_wrapper import WebNavigator
 
@@ -21,7 +19,7 @@ def run_tests_for_browser_serial(browsers, serial_tests):
         for browser in browsers:
             run_tests_via_one_browser(browser, test)
 
-   
+
 def run_tests_in_parallel_mode(browsers, parallel_tests):
     for test_case in parallel_tests:
         with ThreadPoolExecutor(max_workers=len(browsers)) as executor:
