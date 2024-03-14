@@ -34,6 +34,10 @@ jobs:
         with:
           firefox-version: latest
 
-      - name: Run the tests
+      - name: Run API tests
         run: |
-            python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/api_test/api_test.py
+            python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/api_test/test_runner.py
+
+      - name: Run UI tests
+          run: |
+            python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/ui_test/run_all_tests.py
