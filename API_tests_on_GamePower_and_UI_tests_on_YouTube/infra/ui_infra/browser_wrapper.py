@@ -35,7 +35,7 @@ class WebNavigator:
         browser_type = browser
         if self.parallel:
             options = self.set_up_capabilities(browser_type)
-            self.web_driver = webdriver.Remote(command_executor="http://192.168.217.1:4444", options=options)
+            self.web_driver = webdriver.Remote(command_executor="http://172.17.0.1:4444", options=options)
             # self.web_driver = webdriver.Remote(command_executor='http://jenkins.mydomain:4444/wd/hub',options=options)
         else:
             if browser.lower() == 'chrome':
