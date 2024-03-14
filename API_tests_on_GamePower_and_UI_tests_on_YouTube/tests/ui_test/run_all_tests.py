@@ -21,7 +21,7 @@ def run_tests_for_browser_serial(browsers, serial_tests):
         for browser in browsers:
             run_tests_via_one_browser(browser, test)
 
-
+   
 def run_tests_in_parallel_mode(browsers, parallel_tests):
     for test_case in parallel_tests:
         with ThreadPoolExecutor(max_workers=len(browsers)) as executor:

@@ -19,7 +19,7 @@ class HomePage(unittest.TestCase):
     #     self.YouTubeHomePage.modify_theme("Light")
     #     is_theme_applied = self.YouTubeHomePage.confirm_theme("Light")
     #     self.assertTrue(is_theme_applied)
-    
+
     def test_change_location(self):
         self.browser_driver.maximize_window()
         result = self.YouTubeHomePage.change_location("France")
