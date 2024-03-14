@@ -6,7 +6,7 @@ class WebNavigator:
     def __init__(self):
         self.timeout = None
         self.web_driver = None
-        self.parallel =True
+        self.parallel = True
         self.serial = False
 
     def launch_browser(self, browser):
@@ -56,10 +56,10 @@ class WebNavigator:
             options = webdriver.FirefoxOptions()
         elif browser_type.lower() == 'edge':
             options = webdriver.EdgeOptions()
-        # options.add_argument("--headless")
-        # options.add_argument("--no-sandbox")
-        # options.add_argument("--disable-dev-shm-usage")
-        options.add_argument(f'--platformName=windows')
+        options.add_argument("--headless")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        # options.add_argument(f'--platformName=windows')
         return options
 
     def get_browsers(self):

@@ -5,8 +5,8 @@ from API_tests_on_GamePower_and_UI_tests_on_YouTube.tests.ui_test.youtube_channe
 from API_tests_on_GamePower_and_UI_tests_on_YouTube.tests.ui_test.youtube_home_page_tests import HomePage
 from API_tests_on_GamePower_and_UI_tests_on_YouTube.infra.ui_infra.browser_wrapper import WebNavigator
 
-test_serial_cases = [ChannelTests, VideoTests, HomePage]
-test_cases = [ChannelTests]
+test_serial_cases = [HomePage]
+test_cases = [HomePage]
 web_browser = WebNavigator()
 
 

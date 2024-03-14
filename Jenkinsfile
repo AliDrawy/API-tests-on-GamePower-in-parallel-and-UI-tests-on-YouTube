@@ -15,7 +15,7 @@ pipeline {
                 echo 'Testing..'
                 // Add test execution steps here
                 bat 'python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/api_test/test_runner.py'
-                bat 'python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/ui_test/youtube_home_page_tests.py'
+                bat 'python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/ui_test/run_all_tests.py'
 
             }
         }
