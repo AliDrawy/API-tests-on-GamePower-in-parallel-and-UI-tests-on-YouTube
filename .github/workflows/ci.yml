@@ -39,4 +39,4 @@ jobs:
             python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/api_test/test_runner.py
 #      - name: Run UI tests
 #          run: |
-#            python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/api_test/test_runner.py
+#            python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/ui_test/run_all_tests.py
