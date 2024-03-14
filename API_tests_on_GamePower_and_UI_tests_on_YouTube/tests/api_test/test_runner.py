@@ -1,7 +1,7 @@
 import unittest
 from concurrent.futures import ThreadPoolExecutor
 from API_tests_on_GamePower_and_UI_tests_on_YouTube.infra.ui_infra.browser_wrapper import WebNavigator
-from api_test import TestGamePower
+from API_tests_on_GamePower_and_UI_tests_on_YouTube.tests.api_test.api_test import TestGamePower
 
 test_serial_cases = [TestGamePower]
 test_cases = [TestGamePower]
