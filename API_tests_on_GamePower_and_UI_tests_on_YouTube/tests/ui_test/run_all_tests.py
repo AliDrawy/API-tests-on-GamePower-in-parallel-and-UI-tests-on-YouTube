@@ -1,8 +1,8 @@
 import unittest
 from concurrent.futures import ThreadPoolExecutor
-from youtube_video_tests import VideoTests
-from youtube_channel_tests import ChannelTests
-from youtube_home_page_tests import HomePage
+from API_tests_on_GamePower_and_UI_tests_on_YouTube.tests.ui_test.youtube_video_tests import VideoTests
+from API_tests_on_GamePower_and_UI_tests_on_YouTube.tests.ui_test.youtube_channel_tests import ChannelTests
+from API_tests_on_GamePower_and_UI_tests_on_YouTube.tests.ui_test.youtube_home_page_tests import HomePage
 from API_tests_on_GamePower_and_UI_tests_on_YouTube.infra.ui_infra.browser_wrapper import WebNavigator
 
 test_serial_cases = [ChannelTests, VideoTests, HomePage]

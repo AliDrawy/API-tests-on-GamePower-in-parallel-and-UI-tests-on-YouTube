@@ -6,7 +6,7 @@ class WebNavigator:
     def __init__(self):
         self.timeout = None
         self.web_driver = None
-        self.parallel = False
+        self.parallel =True
         self.serial = False
 
     def launch_browser(self, browser):
