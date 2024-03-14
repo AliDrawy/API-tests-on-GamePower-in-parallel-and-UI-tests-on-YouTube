@@ -19,11 +19,10 @@ pipeline {
 
             }
         }
-        stage('Deploy') {
+        stage('parallel') {
             steps {
-                echo 'Deploying..'
-//                 git 'commit -am "Deploying latest changes"'
-//                 git 'push origin main'
+                echo 'parallel..'
+                bat 'python -m unittest API_tests_on_GamePower_and_UI_tests_on_YouTube/tests/ui_test/run_all_tests.py'
 
             }
         }
